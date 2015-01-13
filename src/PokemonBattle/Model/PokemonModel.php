@@ -142,9 +142,9 @@ abstract class PokemonModel implements PokemonInterface
             self::TYPE_FIRE,
             self::TYPE_WATER,
             self::TYPE_PLANT,
-            self::TYPE_ELECTRIC,
+           /* self::TYPE_ELECTRIC,
             self::TYPE_PSY,
-            self::TYPE_NORMAL,
+            self::TYPE_NORMAL,*/
         ]))
             $this->type = $type;
         else

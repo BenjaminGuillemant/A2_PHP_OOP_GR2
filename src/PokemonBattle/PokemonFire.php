@@ -6,6 +6,7 @@ namespace BenjaminGuillemant\PokemonBattle;
 
 use BenjaminGuillemant\PokemonBattle\Model\PokemonModel;
 
+
 class PokemonFire extends PokemonModel
 {
     /**
