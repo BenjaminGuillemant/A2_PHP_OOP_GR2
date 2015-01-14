@@ -1,5 +1,7 @@
 <?php
 
+$em = require __DIR__.'/bootstrap.php';
+
 use BenjaminGuillemant\PokemonBattle\PokemonModel;
 
 $pokemonFire = new PokemonModel();
@@ -9,17 +11,6 @@ $pokemonFire
     ->setType(0)
 ;
 
-$pokemonWater = new PokemonModel();
-$pokemonWater
-    ->setName('Carapuce')
-    ->setHP(100)
-    ->setType(1)
-;
+$em->persist($pokemonFire);
 
-$pokemonPlant = new PokemonModel();
-$pokemonPlant
-    ->setName('Bulbizarre')
-    ->setHP(100)
-    ->setType(2)
-;
-
+$em->flush();
