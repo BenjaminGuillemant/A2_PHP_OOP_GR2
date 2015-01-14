@@ -1,36 +1,44 @@
 <?php
 
-namespace BenjaminGuillemant\PokemonBattle\Model;
+namespace BenjaminGuillemant\PokemonBattle;
 
-
-class PokemonModel implements PokemonInterface
+/**
+ * Class PokemonModel
+ * @package BenjaminGuillemant\PokemonBattle\Model
+ * @Entity
+ * @Table(name="pokemon")
+ */
+class PokemonModel implements Model\PokemonInterface
 {
     /**
      * @var int
+     * @Id
+     * @GeneratedValue(strategy="AUTO")
+     * @Column(name="id", type="integer")
      */
     private $Id;
 
     /**
      * @var string
+     * @Column(name="name", type="string", length=30)
      */
     private $name;
 
     /**
      * @var int
+     * * @Column(name="hp", type="integer")
      */
     private $hp;
 
     /**
      * @var int
+     * @Column(name="type", type="smallint")
      */
     private $type;
 
     const TYPE_FIRE     = 0;
     const TYPE_WATER    = 1;
     const TYPE_PLANT    = 2;
-    /*const TYPE_ELECTRIC = 3;
-    const TYPE_PSY      = 4;
-    const TYPE_NORMAL   = 5;*/
 
 
     /**
@@ -142,33 +150,11 @@ class PokemonModel implements PokemonInterface
             self::TYPE_FIRE,
             self::TYPE_WATER,
             self::TYPE_PLANT,
-           /* self::TYPE_ELECTRIC,
-            self::TYPE_PSY,
-            self::TYPE_NORMAL,*/
         ]))
             $this->type = $type;
         else
             throw new \Exception('Type => Bad');
 
         return $this;
-    }
-
-    /**
-     * @param int $type
-     *
-     * @return bool
-     */
-    private function isTypeWeak($type)
-    {
-
-    }
-
-    /**
-     * @param int $type
-     * @return bool
-     */
-    private function isTypeStrong($type)
-    {
-
     }
 }

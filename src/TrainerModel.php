@@ -1,6 +1,6 @@
 <?php
 
-namespace BenjaminGuillemant\PokemonBattle\Model;
+namespace BenjaminGuillemant\PokemonBattle;
 
 /**
  * Class TrainerModel
@@ -8,7 +8,7 @@ namespace BenjaminGuillemant\PokemonBattle\Model;
  * @Entity
  * @Table(name="trainer")
  */
-class TrainerModel implements TrainerInterface
+class TrainerModel implements Model\TrainerInterface
 {
     /**
      * @var int
