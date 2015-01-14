@@ -3,7 +3,7 @@
 namespace BenjaminGuillemant\PokemonBattle\Model;
 
 
-abstract class PokemonModel implements PokemonInterface
+class PokemonModel implements PokemonInterface
 {
     /**
      * @var int
@@ -158,11 +158,17 @@ abstract class PokemonModel implements PokemonInterface
      *
      * @return bool
      */
-    abstract public function isTypeWeak($type);
+    private function isTypeWeak($type)
+    {
+
+    }
 
     /**
      * @param int $type
      * @return bool
      */
-    abstract public function isTypeStrong($type);
+    private function isTypeStrong($type)
+    {
+
+    }
 }
