@@ -32,7 +32,6 @@ if(isset($_POST['username']) && !empty($_POST['username']) && isset($_POST['pass
     catch(Exception $e){
         $error = $e->getMessage();
     }
-    // If the username is available, i register
     if(NULL === $test) {
         try {
             $em->persist($trainer);
