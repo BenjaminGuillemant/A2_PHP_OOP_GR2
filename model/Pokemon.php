@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Bastien
- * Date: 11/01/2015
- * Time: 11:40
- */
 
 namespace BenjaminGuillemant\PokemonBattle;
 
